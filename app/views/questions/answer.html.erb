@@ -1,9 +1,14 @@
 <div class="container">
-  <h1>Your question: </h1>
-  <%= @question %>
-  <h1>Your coach answered: </h1>
-  <%= @answer %>
+<h1>Stupid Coaching</h1>
+  <div class="p-3 mb-2">
+   <%= @question %>
+    <p> - You </p>
+  </div>
+  <div class="p-3 mb-2 bg-gradient-warning">
+    <%= @answer %>
+    <p> - Your coach </p>
+  </div>
   <div class ="return-question">
-    <a href="/questions/ask"> Ask another question. </a>
+    <%= link_to "Ask another question.", ask_path %>
   </div>
 </div>
